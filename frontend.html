@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate Your Local Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NavMyMarket</h1>
+        <p>Find the best local shops and markets near you!</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for products, shops, or categories...">
+            <button onclick="search()">Search</button>
+        </div>
+
+        <div class="filters">
+            <label for="categories">Category:</label>
+            <select id="categories">
+                <option value="all">All</option>
+                <option value="grocery">Grocery</option>
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+
+        <div id="map-container">
+            <h2>Map</h2>
+            <p>The interactive map will appear here.</p>
+        </div>
+
+        <div id="results">
+            <h2>Results</h2>
+            <ul id="result-list">
+                <!-- Search results will be dynamically inserted here -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Navigate Your Local Market</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

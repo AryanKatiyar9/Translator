@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0876ad;
+    color: rgb(251, 182, 6);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+.search-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#search-bar {
+    width: 60%;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #078ead;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.filters {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+#map-container {
+    margin: 2rem 0;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#results {
+    margin-top: 2rem;
+}
+
+#result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#result-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    background-color: #089dd3;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
