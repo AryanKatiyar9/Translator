@@ -1,0 +1,101 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Text Translator</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #6a0dad;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            margin: 0;  
+        }  
+
+        .translator-container {  
+            background-color: white;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+            padding: 20px;  
+            width: 90%;  
+            max-width: 600px;  
+        }  
+
+        .translator-wrapper {  
+            display: flex;  
+            flex-direction: column;  
+            gap: 10px;  
+        }  
+
+        textarea {  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+            padding: 10px;  
+            resize: none;  
+            font-size: 16px;  
+        }  
+
+        select {  
+            padding: 10px;  
+            border-radius: 5px;  
+            border: 1px solid #ddd;  
+        }  
+
+        button {  
+            background-color: #5c6bc0;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            padding: 10px;  
+            cursor: pointer;  
+            font-size: 16px;  
+            transition: background-color 0.3s;  
+        }  
+
+        button:hover {  
+            background-color: #3f51b5;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="translator-container">  
+        <div class="translator-wrapper">  
+            <textarea id="inputText" rows="10" placeholder="Enter text here..."></textarea>  
+            <select id="fromLanguage">  
+                <option value="en">English</option>  
+                <option value="hi">Hindi</option>  
+            </select>  
+            <textarea id="outputText" rows="10" placeholder="Translation..." readonly></textarea>  
+            <select id="toLanguage">  
+                <option value="hi">Hindi</option>  
+                <option value="en">English</option>  
+            </select>  
+            <button id="translateBtn">Translate Text</button>  
+        </div>  
+    </div>  
+
+    <script>  
+        document.getElementById("translateBtn").addEventListener("click", function() {  
+            const inputText = document.getElementById("inputText").value;  
+            const fromLang = document.getElementById("fromLanguage").value;  
+            const toLang = document.getElementById("toLanguage").value;  
+            
+            // Simulate translation  
+            const translatedText = simulateTranslation(inputText, fromLang, toLang);  
+            document.getElementById("outputText").value = translatedText;  
+        });  
+
+        function simulateTranslation(text, fromLang, toLang) {  
+            if (fromLang === "en" && toLang === "hi") {  
+                return "यह एक परीक्षण है"; // "This is a test" in Hindi  
+            } else if (fromLang === "hi" && toLang === "en") {  
+                return "This is a test"; // "यह एक परीक्षण है" in English  
+            }  
+            return text; // No translation  
+        }  
+    </script>  
+</body>  
+</html>
